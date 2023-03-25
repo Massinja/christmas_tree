@@ -5,11 +5,12 @@
 #define COLOR_GREEN   "\x1b[32m"
 #define COLOR_RESET   "\x1b[37m"
 
+/*
 // tree ornaments for the future use :)
 #define COLOR_RED     "\x1b[31m"
 #define COLOR_YELLOW  "\x1b[33m"
 #define COLOR_BLUE    "\x1b[34m"
-
+*/
 
 
 int row_width(int tier_num, int row_width, int adding){
@@ -63,7 +64,6 @@ void branch_row_builder(int width){
     int i = 0;
     while(i<width){
         printf(COLOR_GREEN "*");
-        printf("*");
         i++;
     } 
 }
@@ -92,7 +92,6 @@ void crown_builder(int *tree_size_ptr, int *crown_tip_offset){
             space_builder(offset);
             branch_row_builder(top_width);
             printf(COLOR_RESET"\n");
-            printf("\n");
             top_width+=2;
             offset--;
         }
